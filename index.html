@@ -16,17 +16,184 @@ Select ONE Additional Feature to Add
 
 <!DOCTYPE html>
 <html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rock+3D&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barrio&display=swap"
+      rel="stylesheet"
+    />
+    <title>Unit 5 Project</title>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        background-color: rgb(187, 187, 123);
+      }
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        overflow: hidden;
 
-<head>
-  <title>Unit 5 Project</title>
-  <meta charset="utf-8">
-  <style>
+        position: fixed;
+        top: 0;
+        width: 100%;
 
-  </style>
-</head>
-<body>
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
 
- 
+      li {
+        display: inline;
+      }
+      li a {
+        text-decoration: none;
+        padding: 8px;
+        background-color: rgb(15, 115, 133);
+        color: rgb(255, 170, 0);
+        font-family: "Rock 3D", system-ui;
+        font-weight: 1000;
+        font-style: normal;
+      }
 
-</body>
+      .flip-card {
+        background-color: transparent;
+        width: 300px;
+        height: 300px;
+        perspective: 1000px;
+      }
+
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      }
+
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+
+      .flip-card-front,
+      .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+      }
+
+      .flip-card-front {
+        background-color: #bbb;
+        color: black;
+      }
+
+      .flip-card-back {
+        background-color: #8f8f52;
+        color: orange;
+        transform: rotateY(180deg);
+        font-family: "Rock 3D", system-ui;
+        font-weight: 1000;
+        font-style: normal;
+      }
+
+      .main {
+        /*       background-color:blue; */
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+      .info {
+        background: rgb(219, 235, 255);
+        width: 100%;
+        height: 100%;
+      }
+      #title {
+        font-family: "Barrio", system-ui;
+        font-weight: 1000;
+        font-style: normal;
+        color: rgb(15, 115, 133);
+      }
+    </style>
+  </head>
+
+  <body>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Food.html">Food</a></li>
+      <li><a href="Activities.html">Activities</a></li>
+    </ul>
+    <br />
+    <h1 id="title">You are invited to...</h1>
+    <h5>(flip cards for the info)</h5>
+
+    <div class="info">
+      <div class="main">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img
+                src="https://cdn.glitch.global/eaa28dea-ecfe-440e-beaf-a10f75b49ab2/thumbnails%2FIMG-6293.JPG?1733503621025"
+                alt="Avatar"
+                style="width: 300px; height: 300px"
+              />
+            </div>
+            <div class="flip-card-back">
+              <h1>Ari n Tori's Freaking Birthday!!</h1>
+              <p>( ͡⊙ ͜ʖ ͡⊙)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img
+                src="https://cdn.glitch.global/eaa28dea-ecfe-440e-beaf-a10f75b49ab2/Screenshot%202024-12-06%204.14.37%20PM.png?v=1733519717753"
+                alt="Avatar"
+                style="width: 300px; height: 300px"
+              />
+            </div>
+            <div class="flip-card-back">
+              <h1></h1>
+              <h2>
+                Location: Our APT!
+                <br />
+                <br />Date: 12.08.2024
+                <br />
+                <br />
+                Time: 12:30 PM - 5:30ish PM
+              </h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img
+                src="https://cdn.glitch.global/eaa28dea-ecfe-440e-beaf-a10f75b49ab2/thumbnails%2FIMG-9163.jpg?1733503558478"
+                alt="Avatar"
+                style="width: 300px; height: 300px"
+              />
+            </div>
+            <div class="flip-card-back">
+              <h1>Be there or Be square...</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
